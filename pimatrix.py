@@ -4,7 +4,6 @@
 Analyze the relationships between digits in pi.
 """
 
-from __future__ import print_function
 import bigfloat
 from bigfloat import precision
 import numpy
@@ -19,7 +18,7 @@ pi.pop(0)
 
 m = numpy.zeros(100).reshape((10, 10))
 
-for i in xrange(0, len(pi)):
+for i in range(0, len(pi)):
     try:
         m[pi[i], pi[i+1]] += 1  # count adjacent digits of pi
     except IndexError:
